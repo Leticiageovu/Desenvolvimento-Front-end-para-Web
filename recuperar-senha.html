@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Recuperação de senha do sistema da ONG Menos Tela e Mais Diversão.">
+  <title>Recuperar Senha — Menos Tela e Mais Diversão</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <header>
+    <!-- Botão de menu só aparece no celular -->
+    <div class="container-mob">
+      <button class="menu-btn" id="menuBtn">
+        <img src="assets/imagem/menu.png" alt="menu">
+      </button>
+    </div>
+
+    <!-- Menu principal -->
+    <nav id="menuNav" aria-label="Menu principal">
+      <a href="index.html" class="brand">Menos Tela e Mais Diversão</a> 
+      <a href="projetos.html">Projetos</a> 
+      <a href="sobre.html">Sobre a ONG</a> 
+      <a href="transparencia.html">Transparência</a> 
+      <a href="contato.html">Contato</a> 
+      <a href="cadastro.html">Cadastro</a> 
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="recuperar-titulo">
+      <div class="hero-title">
+        <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
+        <h1 id="recuperar-titulo">Recuperar Senha</h1>
+      </div>
+      <p>Informe o e-mail cadastrado para receber o link de redefinição de senha.</p>
+
+      <form id="recuperar-form" action="recuperar-confirmacao.html" method="get">
+        <fieldset>
+          <legend>Recuperar Senha</legend>
+
+          <label for="email">E-mail cadastrado:</label>
+          <input id="email" name="email" type="email" required placeholder="exemplo@email.com">
+
+          <br><br>
+          <button type="submit">Enviar Link de Recuperação</button>
+          <button type="reset">Limpar</button>
+        </fieldset>
+      </form>
+
+      <p><a href="login.html">Voltar para o login</a></p>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    <div class="container-footer">
+      <div class="imagem-container-footer">
+        <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
+        <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
+        <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+      </div>
+      <p>&copy; <span id="year-recuperar"></span> Menos Tela e Mais Diversão</p>
+      <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+    </div>
+  </footer>
+  <script></script>
+
+ 
+</body>
+</html>

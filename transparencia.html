@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Relatórios e informações de transparência da ONG Menos Tela e Mais Diversão.">
+  <title>Transparência — Menos Tela e Mais Diversão</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Botão de menu só aparece no celular -->
+    <div class="container-mob">
+      <button class="menu-btn" id="menuBtn">
+        <img src="assets/imagem/menu.png" alt="menu">
+      </button>
+    </div>
+
+    <!-- Menu principal -->
+    <nav id="menuNav" aria-label="Menu principal">
+      <a href="index.html" class="brand">Menos Tela e Mais Diversão</a> 
+      <a href="projetos.html">Projetos</a> 
+      <a href="sobre.html">Sobre a ONG</a> 
+      <a href="transparencia.html">Transparência</a> 
+      <a href="contato.html">Contato</a> 
+      <a href="cadastro.html">Cadastro</a> 
+      <a href="login.html">Login</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="transparencia" aria-labelledby="hero-transparencia">
+      <div class="hero-title">
+        <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
+        <h1 id="hero-transparencia">Transparência</h1>
+      </div>
+      <p>Acreditamos que a confiança é construída com clareza e responsabilidade.</p>
+    </section>
+    <section aria-labelledby="relatorios">
+      <h2 id="relatorios">📄 Relatórios Financeiros</h2>
+      <ul>
+        <li><a href="#">Relatório 2025 (PDF)</a></li>
+        <li><a href="#">Relatório 2024 (PDF)</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="conquistas">
+      <h2 id="conquistas">🏆 Conquistas e Resultados</h2>
+      <p>Em 2024, impactamos mais de <strong>500 crianças</strong> com oficinas e atividades educativas.</p>
+    </section>
+
+    <section aria-labelledby="doacoes">
+      <h2 id="doacoes">📊 Doações e Aplicação de Recursos</h2>
+      <p>Todo valor arrecadado é revertido em brinquedos, livros e eventos de integração familiar.</p>
+
+      
+      <figure>
+        <canvas id="graficoDoacoes" ></canvas>
+        <figcaption>Gráfico 1 — Distribuição das doações recebidas em 2025.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="impacto">
+      <h2 id="impacto">📈 Impacto Social</h2>
+      <p>Indicadores de impacto das ações da ONG ao longo dos últimos anos.</p>
+
+      
+      <figure>
+        <canvas id="graficoImpacto"></canvas>
+        <figcaption>Gráfico 2 — Número de crianças beneficiadas e horas de voluntariado.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="projetos">
+      <h2 id="projetos">📅 Projetos Realizados</h2>
+      <p>Veja a evolução dos projetos realizados ao longo do tempo.</p>
+
+      
+      <figure>
+        <canvas id="graficoProjetos" ></canvas>
+        <figcaption>Gráfico 3 — Projetos realizados por trimestre em 2025.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    <div class="container-footer">
+      <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
+      <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
+      <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
+      <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+      <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
+      <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+    </div>
+  </footer>
+  <script></script>
+</body>
+</html>

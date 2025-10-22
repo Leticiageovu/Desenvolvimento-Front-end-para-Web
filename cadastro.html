@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cadastre-se como voluntário ou doador na ONG Menos Tela e Mais Diversão e ajude a promover uma infância mais saudável e criativa.">
+  
+  <title>Cadastro — Menos Tela e Mais Diversão</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <!-- Botão de menu só aparece no celular -->
+    <div class="container-mob">
+      <button class="menu-btn" id="menuBtn">
+        <img src="assets/imagem/menu.png" alt="menu">
+      </button>
+    </div>
+
+    <!-- Menu principal -->
+    <nav id="menuNav" aria-label="Menu principal">
+      <a href="index.html" class="brand">Menos Tela e Mais Diversão</a> 
+      <a href="projetos.html">Projetos</a> 
+      <a href="sobre.html">Sobre a ONG</a> 
+      <a href="transparencia.html">Transparência</a> 
+      <a href="contato.html">Contato</a> 
+      <a href="cadastro.html">Cadastro</a> 
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cadastro" aria-labelledby="cad-title">
+      <div class="container-cadastro">
+        <img src="assets/imagem/logo.png" alt="Logo Menos Tela e Mais Diversão"  class="img-logo">   
+        <h1 id="cad-title">Cadastro de Voluntário / Doador</h1>
+      </div>  
+        <img src="assets/imagem/sejaumvoluntariodoador.png" alt="Seja um voluntário ou doador" >
+
+      <form id="form-cadastro" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <label for="ncompleto">Nome completo:</label>
+          <input id="ncompleto" name="ncompleto" type="text" required placeholder="Seu nome completo">
+
+          <label for="cpf">CPF:</label>
+          <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
+
+          <label for="datadenascimento">Data de nascimento:</label>
+          <input id="datadenascimento" name="datadenascimento" type="date" required>
+
+          <label for="telefone">Telefone:</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(99) 99999-9999" required>
+
+          <label for="email">E-mail:</label>
+          <input id="email" name="email" type="email" placeholder="contato@exemplo.com" required>
+
+          <label for="endereco">Endereço:</label>
+          <input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento" required>
+
+          <label for="cidade">Cidade:</label>
+          <input id="cidade" name="cidade" type="text" required>
+
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+          </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferências</legend>
+            <label><input type="checkbox" name="voluntario"> Quero ser voluntário</label>
+            <label><input type="checkbox" name="doar"> Tenho interesse em doar materiais</label>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Disponibilidade</legend>
+              <div class="form-group">
+                <label for="disponibilidade">Quando você pode atuar como Voluntário</label>
+                  <select id="disponibilidade" name="disponibilidade" required> 
+                    <option value="">Selecione..</option>
+                    <option value="final-de-semana">Final de Semana</option>
+                    <option value="dias-uteis">Dias Úteis</option>  
+                    <option value="flexivel">Flexiveis</option> 
+                    <option value="feriado">Feriado</option>  
+                  </select> 
+              </div> 
+          </fieldset> 
+          <fieldset>
+            <legend>Mensagem</legend>
+            <textarea id="Mensagem" name="Mensagem" rows="6" placeholder="Deixe sua mensagem aqui" required></textarea>
+          </fieldset>
+
+          <div class="actions">
+            <button type="submit">Enviar cadastro</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </form>
+
+        <div class="sucess-message" id="sucessMensage">
+          Cadastro realizado com sucesso!
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
+    <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+  </footer>
+  <script></script>
+</body>
+</html>

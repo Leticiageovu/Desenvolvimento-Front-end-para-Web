@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Painel administrativo para gerenciar projetos, voluntários e doações da ONG Menos Tela e Mais Diversão.">
+    <title>Painel Administrativo — Menos Tela e Mais Diversão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Botão de menu só aparece no celular -->
+        <div class="container-mob">
+            <button class="menu-btn" id="menuBtn">
+                <img src="assets/imagem/menu.png" alt="menu">
+            </button>
+        </div>
+
+        <!-- Menu principal -->
+        <nav id="menuNav" aria-label="Menu principal">
+            <a href="index.html" class="brand">Menos Tela e Mais Diversão</a> 
+            <a href="projetos.html">Projetos</a> 
+            <a href="sobre.html">Sobre a ONG</a> 
+            <a href="transparencia.html">Transparência</a> 
+            <a href="contato.html">Contato</a> 
+            <a href="cadastro.html">Cadastro</a> 
+            <a href="login.html">Login</a>
+        
+        </nav>
+  </header>
+
+    <main>
+        <section  aria-labelledby="admin-title">
+            <div class="hero-title">
+                <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
+                <h1 id="admin-title">Painel Administrativo</h1>
+            </div>    
+            <p>Bem-vindo(a), Administrador! Aqui você pode gerenciar as informações da ONG, cadastrar novos projetos e acompanhar os voluntários e doações.</p>
+        </section>
+
+       
+        <section aria-labelledby="proj-title">
+            <h2 id="proj-title">Gestão de Projetos</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Cadastrar novo projeto</legend>
+                    <label for="nomeProjeto">Nome do projeto:</label>
+                    <input id="nomeProjeto" name="nomeProjeto" type="text" required placeholder="Ex: Oficinas Criativas">
+                    
+                    <label for="descricaoProjeto">Descrição:</label>
+                    <textarea id="descricaoProjeto" name="descricaoProjeto" rows="5" cols="80" required placeholder="Descreva o projeto..."></textarea>
+                    
+                    <label for="categoriaProjeto">Categoria:</label>
+                    <select id="categoriaProjeto" name="categoriaProjeto">
+                        <option value="">Selecione</option>
+                        <option value="educacao">Educação</option>
+                        <option value="esporte">Esporte</option>
+                        <option value="arte">Arte e Cultura</option>
+                        <option value="comunidade">Comunidade</option>
+                    </select>
+                    
+                    <label for="dataInicio">Data de início:</label>
+                    <input id="dataInicio" name="dataInicio" type="date" required>
+                    
+                    <label for="dataFim">Data de término:</label>
+                    <input id="dataFim" name="dataFim" type="date">
+                    
+                    <div>
+                        <button type="submit">Salvar Projeto</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h3>Projetos Cadastrados</h3>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oficinas Criativas</td>
+                        <td>Arte e Cultura</td>
+                        <td>Ativo</td>
+                        <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
+                    </tr>
+                    <tr>
+                        <td>Brincadeiras ao Ar Livre</td>
+                        <td>Esporte</td>
+                        <td>Ativo</td>
+                        <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="voluntarios-title">
+            <h2 id="voluntarios-title">Gestão de Voluntários</h2>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Projeto</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Letícia Geovú</td>
+                        <td>leticia@email.com</td>
+                        <td>Oficinas Criativas</td>
+                        <td>Ativa</td>
+                    </tr>
+                    <tr>
+                        <td>João Pereira</td>
+                        <td>joaop@email.com</td>
+                        <td>Clube da Leitura</td>
+                        <td>Ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        
+        <section aria-labelledby="doacoes-title">
+            <h2 id="doacoes-title">Gestão de Doações</h2>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Nome do Doador</th>
+                        <th>Tipo</th>
+                        <th>Valor / Item</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10/10/2025</td>
+                        <td>Maria Silva</td>
+                        <td>Financeira</td>
+                        <td>R$ 150,00</td>
+                        <td>Recebida</td>
+                    </tr>
+                    <tr>
+                        <td>14/10/2025</td>
+                        <td>Pedro Santos</td>
+                        <td>Material</td>
+                        <td>Caixa de brinquedos</td>
+                        <td>Em análise</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="relatorios-title">
+            <h2 id="relatorios-title">Relatórios e Indicadores</h2>
+            <ul>
+                <li><a href="#">📊 Relatório de Participação de Voluntários</a></li>
+                <li><a href="#">💰 Relatório Financeiro de Doações</a></li>
+                <li><a href="#">📈 Indicadores de Impacto Social</a></li>
+            </ul>
+        </section>
+
+     
+        <section aria-labelledby="logout-title">
+            <h2 id="logout-title">Encerrar Sessão</h2>
+            <p><a href="login.html">Sair do Painel</a></p>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <div class="container-footer">
+            <div class="imagem-container-footer">
+                <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+            </div>
+            <p>&copy; <span id="year-admin"></span> Menos Tela e Mais Diversão</p>
+            <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+        </div>
+    </footer>
+    <script></script>
+</body>
+</html>
