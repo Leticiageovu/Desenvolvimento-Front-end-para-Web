@@ -50,7 +50,8 @@ Os links recebem:
 nav a {
   text-decoration: none;
   color: #000;
-}
+} 
+```
 
 ---
 
@@ -85,11 +86,13 @@ Além disso, mensagens de sucesso (.sucess-message) foram adicionadas com cores 
 
 As principais seções utilizam:
 
+```
 section {
   background: #ffffffd9; /* Fundo branco com transparência */
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+ ```
 
 Esses elementos trazem profundidade e elegância, sem comprometer a legibilidade do conteúdo.
 ---
