@@ -6,7 +6,7 @@
   <meta name="description" content="Cadastre-se como voluntário ou doador na ONG Menos Tela e Mais Diversão e ajude a promover uma infância mais saudável e criativa.">
   
   <title>Cadastro — Menos Tela e Mais Diversão</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/style.css">
 
 </head>
 <body>
@@ -30,16 +30,17 @@
     </nav>
   </header>
 
-  <main>
+ <main>
     <section class="cadastro" aria-labelledby="cad-title">
-      <div class="container-cadastro">
-        <img src="assets/imagem/logo.png" alt="Logo Menos Tela e Mais Diversão"  class="img-logo">   
-        <h1 id="cad-title">Cadastro de Voluntário / Doador</h1>
-      </div>  
-        <img src="assets/imagem/sejaumvoluntariodoador.png" alt="Seja um voluntário ou doador" >
-
+      <div class="title">
+        <div class="hero-title">
+          <img src="assets/imagem/logo.png" alt="Logo Menos Tela e Mais Diversão" class="img-logo" >   
+          <h1 id="cad-title">Cadastro de Voluntário / Doador</h1>
+        </div>  
+        <img src="assets/imagem/sejaumvoluntariodoador.png" alt="Seja um voluntário ou doador" class="sejavolunt-doador" >
+      </div>
       <form id="form-cadastro" action="#" method="post" novalidate>
-        <fieldset>
+        <fieldset class="dados-pessoais">
           <legend>Dados Pessoais</legend>
 
           <label for="ncompleto">Nome completo:</label>
@@ -72,48 +73,57 @@
             <option value="BA">Bahia</option>
             <option value="CE">Ceará</option>
           </select>
-          </fieldset>
+        </fieldset>
 
-          <fieldset>
-            <legend>Preferências</legend>
-            <label><input type="checkbox" name="voluntario"> Quero ser voluntário</label>
-            <label><input type="checkbox" name="doar"> Tenho interesse em doar materiais</label>
+          <fieldset class="preferencias">
+          <legend>Preferências</legend>
+          <label class="preferencias1"><input type="checkbox" name="voluntario"> Quero ser voluntário</label>
+          <label class="preferencias2"><input type="checkbox" name="doar"> Tenho interesse em doar materiais</label>
           </fieldset>
-          
-          <fieldset>
-            <legend>Disponibilidade</legend>
+          <fieldset class="disponibilidade">
+          <legend>Disponibilidade</legend>
               <div class="form-group">
-                <label for="disponibilidade">Quando você pode atuar como Voluntário</label>
+              <label for="disponibilidade">Quando você pode atuar como Voluntário</label>
                   <select id="disponibilidade" name="disponibilidade" required> 
-                    <option value="">Selecione..</option>
-                    <option value="final-de-semana">Final de Semana</option>
-                    <option value="dias-uteis">Dias Úteis</option>  
-                    <option value="flexivel">Flexiveis</option> 
-                    <option value="feriado">Feriado</option>  
+                      <option value="">Selecione..</option>
+                      <option value="final-de-semana">Final de Semana</option>
+                      <option value="dias-uteis">Dias Úteis</option>  
+                      <option value="flexivel">Flexiveis</option> 
+                      <option value="feriado">Feriado</option>  
                   </select> 
               </div> 
           </fieldset> 
-          <fieldset>
-            <legend>Mensagem</legend>
-            <textarea id="Mensagem" name="Mensagem" rows="6" placeholder="Deixe sua mensagem aqui" required></textarea>
-          </fieldset>
+        <fieldset class="mensagem">
+          <legend>Mensagem</legend>
+          <textarea id="Mensagem" name="Mensagem" rows="8" cols="80" required placeholder="Deixe sua mensagem aqui" ></textarea>
+        </fieldset>
 
-          <div class="actions">
-            <button type="submit">Enviar cadastro</button>
-            <button type="reset">Limpar</button>
-          </div>
-        </form>
-
-        <div class="sucess-message" id="sucessMensage">
-          Cadastro realizado com sucesso!
+        <div class="actions">
+          <button type="submit">Enviar cadastro</button>
+          <button type="reset">Limpar</button>
         </div>
+      </form>
+
+      <div class="sucess-message" id="sucessMensage">
+        Cadastro realizado com sucesso!
+      </div>
+    
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
-    <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+   <footer>
+    <div class="container-footer">
+      <div class="imagem-container-footer" id="imagem-container-footer">
+        <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
+        <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
+        <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+      </div>
+      <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
+      <p><strong>Desenvolvido por Leticia Geovú</strong></p>
+    </div>
   </footer>
-  <script></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
