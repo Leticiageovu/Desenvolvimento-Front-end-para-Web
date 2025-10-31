@@ -29,8 +29,7 @@ Desenvolver a **estrutura semântica HTML5 completa** do site da ONG, aplicando 
 O site é composto pelas seguintes páginas:
 
 ### 🏠 `index.html`
-Página inicial da ONG, apresentando a **missão, visão e valores** da instituição.  
-Contém também um destaque para o propósito principal do projeto: **promover atividades lúdicas e saudáveis fora do ambiente digital**.
+Página inicial da ONG, contém também um destaque para o propósito principal do projeto: **promover atividades lúdicas e saudáveis fora do ambiente digital**.
 
 ---
 
@@ -41,7 +40,7 @@ Cada projeto é descrito com **texto e imagem ilustrativa**, organizados em seç
 ---
 
 ### 👩‍🏫 `sobre.html`
-Traz informações **sobre a história da ONG**, sua **fundadora e equipe**, além da **motivação** que deu origem ao projeto *Menos Tela e Mais Diversão*.  
+Apresentando a **missão, visão e valores** da instituição  e traz informações **sobre a história da ONG**, sua **fundadora e equipe**, além da **motivação** que deu origem ao projeto *Menos Tela e Mais Diversão*.  
 Inclui também uma breve explicação sobre os **valores e objetivos sociais** da organização.
 
 ---
