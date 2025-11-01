@@ -12,12 +12,15 @@
     <meta name="revisit-after" content="7 days">
 
     <title>Menos Tela e Mais Diversão</title>
-    <link rel="stylesheet" href="CSS/style.css">
-  
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS do Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 </head>
 <body>
- <header>
-        <!-- Botão de menu só aparece no celular -->
+    <header>
+        <!-- Botão de menu (mobile) -->
         <div class="container-mob">
             <button class="menu-btn" id="menuBtn">
                 <img src="assets/imagem/menu.png" alt="menu">
@@ -26,84 +29,26 @@
 
         <!-- Menu principal -->
         <nav id="menuNav" aria-label="Menu principal">
-            <a href="index.html" class="brand">Menos Tela e Mais Diversão</a> 
-            <a href="projetos.html">Projetos</a> 
-            <a href="sobre.html">Sobre a ONG</a> 
-            <a href="transparencia.html">Transparência</a> 
-            <a href="contato.html">Contato</a> 
-            <a href="cadastro.html">Cadastro</a> 
-            <a href="login.html">Login</a>
+            <a href="#/" class="brand">Menos Tela e Mais Diversão</a>
+            <a href="#/projetos">Projetos</a>
+            <a href="#/sobre">Sobre a ONG</a>
+            <a href="#/transparencia">Transparência</a>
+            <a href="#/contato">Contato</a>
+            <a href="#/cadastro">Cadastro</a>
+            <a href="#/login">Login</a>
         </nav>
-  </header>
-  
+    </header>
 
-  <main>
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-title">
-                <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
-                <h1 id="hero-title">Menos Tela e Mais Diversão</h1>
-            </div>
-            <div class="hero-somos">
-                <h2>Promovendo experiências offline que ajudam no desenvolvimento saudável das crianças.</h2>
-                <p>Somos uma organização dedicada a resgatar o valor do brincar, do convívio e da criatividade longe das telas. Criamos projetos que estimulam o movimento, a imaginação e a socialização, aproximando famílias e comunidades em atividades que inspiram alegria e equilíbrio.</p>
-                <a href="sobre.html">Saiba mais sobre nossa história</a>
-            </div>
-        </section>
-        <section class="carrossel" aria-label="Galeria de atividades">
-            <h2>Galeria de Momentos</h2>
+    <!-- 🔹 ESTE é o container que o router vai atualizar -->
+    <main id="conteudo" class="mostrar">
+        <div class="loading">
+            <p>Carregando conteúdo...</p>
+        </div>
+    </main>
 
-            <div class="carrossel-container">
-                
-                <div class="carrossel-imagens">
-                    <img src="assets/imagem/criançacomtinta.jpg" alt="Crianças brincando ao ar livre" class="img-carrossel">
-                    <img src="assets/imagem/crianças-correndo.jpg" alt="Evento recreativo da ONG" class="img-carrossel">
-                    <img src="assets/imagem/criancas-brincando1.png" alt="Oficina de pintura com voluntários" class="img-carrossel">
-                    <img src="assets/imagem/crianças-sorrindo.jpg" alt="Voluntários organizando brinquedos" class="img-carrossel">
-                </div>
-                
-            </div>
-        </section>
-        <section class="destaques" aria-labelledby="destaques-title">
-            <h2 id="destaques-title">Nossos Projetos em Destaque</h2>
-            <p>Conheça algumas das iniciativas que estão transformando a infância:</p>
-            <ul>
-                <li><strong>Brincar Livre:</strong> Oficinas e atividades ao ar livre para crianças de 3 a 10 anos.</li>
-                <li><strong>Leitura em Família:</strong> Rodas de leitura e contação de histórias para fortalecer vínculos afetivos.</li>
-                <li><strong>Arte e Movimento:</strong> Projetos com pintura, dança e expressão corporal.</li>
-            </ul>
-            <a href="projetos.html">Ver todos os projetos</a>
-        </section>
+    <hr>
 
-        <section class="chamada-voluntario" aria-labelledby="chamada-title">
-            <h2 id="chamada-title">Seja parte dessa transformação!</h2>
-            <p>Seja voluntário ou apoiador e ajude a promover uma infância mais saudável e feliz.</p>
-            <a href="cadastro.html">Quero participar</a>
-        </section>
-
-        <section class="newsletter" aria-labelledby="newsletter-title">
-            <h2 id="newsletter-title">Receba nossas novidades</h2>
-            <form id="form-email" action="#" method="post">
-                <label for="email-news">Digite seu e-mail:</label>
-                <input type="email" id="email-news" name="email-news" placeholder="Seu e-mail" required>
-                <button type="submit">Inscrever-se</button>
-                <div class="email-cadastrado" id="email-cadastrado">
-                    Em breve você receberá novidades no seu e-mail!
-                </div>
-            </form>
-        </section>
-
-        <section class="contato" aria-labelledby="contato-title">
-            <h2 id="contato-title">Fale Conosco</h2>
-            <address>
-                <p>Email: <a href="mailto:contato@menostelaemaisdiversao.org.br">contato@menostelaemaisdiversao.org</a></p>
-                <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-                <p>Endereço: Rua das Flores, 123 — São Paulo, SP</p>
-            </address>
-        </section>
-  </main>
-
-  <hr>
-  <footer>
+    <footer>
         <div class="container-footer">
             <div class="imagem-container-footer" id="imagem-container-footer">
                 <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
@@ -115,7 +60,16 @@
             <p><strong>Desenvolvido por Leticia Geovú</strong></p>
         </div>
     </footer>
+
+    <!-- jQuery (obrigatório para o Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JS do Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Scripts gerais -->
     <script src="js/script.js"></script>
-    
+     <!-- script router -->
+    <script src="js/router.js"></script>
 </body>
 </html>

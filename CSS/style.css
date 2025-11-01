@@ -203,14 +203,16 @@ h1{
   align-items: center;
   justify-content: center;
 }
-/*
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f6f9fc;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}*/
+#loginMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  display: none;
+}
+
+#loginMessage.ativo {
+  display: block;
+  color: green;
+}
 
 section {
  background: #ffffffd9; /* o 'd9' define a transparência (~85%) */
@@ -580,7 +582,60 @@ html {
 }
 
 
+/* ======== EFEITOS DO SPA (TRANSIÇÕES E FEEDBACK) ======== */
 
+/* Container principal que o Router atualiza */
+#conteudo {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  min-height: 60vh; /* evita 'pulos' ao trocar páginas curtas */
+}
+
+/* Quando o conteúdo for carregado */
+#conteudo.mostrar {
+  opacity: 1;
+}
+
+/* Tela de carregamento */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #444;
+  animation: pisca 1s infinite alternate;
+}
+
+@keyframes pisca {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Página de erro */
+.erro {
+  text-align: center;
+  padding: 3rem;
+  color: #c00;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.erro a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: #c00;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.erro a:hover {
+  background: #a00;
+}
 
 
 
