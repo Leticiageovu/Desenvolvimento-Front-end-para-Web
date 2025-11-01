@@ -1,4 +1,4 @@
-# Documentação Técnica - Atividade 1:HTML
+# Documentação Técnica - Atividade 3:HTML
 
 ## informações do Projeto
 **Atividade:** Desenvolvimento Front-End para Web
