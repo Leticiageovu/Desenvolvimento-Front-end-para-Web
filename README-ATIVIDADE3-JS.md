@@ -1,10 +1,15 @@
 # Documentação Técnica - Atividade 3:HTML
 
 ## informações do Projeto
+
 **Atividade:** Desenvolvimento Front-End para Web
+
 **Turma:** 005
+
 **Aluna:** Letícia Gabrielly Dos Santos Geovú  
+
 **RGM:** 46294554
+
 **Atividade 3**: Sistema SPA (Single Page Application) e Sistema de Templates com JavaScript
 
 ---
