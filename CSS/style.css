@@ -1,0 +1,700 @@
+
+/* ======== ESTILOS BÁSICOS ======== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/imagem/fundooo.png");
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  background: #f5f5f5;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  padding: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/* ======== MENU MOBILE ======== */
+.container-mob {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.menu-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #f5f5f5;
+    padding: 10px;
+  }
+
+  nav.ativo {
+    display: flex;
+  }
+
+  .container-mob {
+    display: block;
+  }
+}
+
+/* ======== FORMULÁRIO ======== */
+main {
+  padding: 20px;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ======== MENSAGEM DE SUCESSO ======== */
+.sucess-message {
+  display: none;
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sucess-message.ativo {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
+}
+.imagem-container-footer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+/* ======== repitidas ======== */
+/* ======== title ======== */
+
+.hero-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+  padding: 50px;
+  flex-wrap: wrap;
+  border-radius: 22px;
+}
+.img-logo{
+  width: 200px;
+}
+h1{
+  display: flex;
+  align-items: center;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======== Painel Administrativo ======== */
+
+.admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project{
+  display: flex;
+  align-items: center;
+  gap: 85px;
+  font-size: medium;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.volunt-title{
+
+  display: flex;
+  align-items: center;
+  gap: 105px;
+  font-size: medium;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.doac-title{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: medium;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.Relat-title{
+  gap: 168px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#loginMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  display: none;
+}
+
+#loginMessage.ativo {
+  display: block;
+  color: green;
+}
+
+section {
+ background: #ffffffd9; /* o 'd9' define a transparência (~85%) */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 30px auto;
+  padding: 20px 25px;
+  max-width: 900px;
+}
+
+h2 {
+  color: #004aad;
+  border-bottom: 3px solid #00bcd4;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* Estilo geral das tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 10px;
+}
+
+th {
+  background-color: #00bcd4;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f8fb;
+}
+
+tbody tr:hover {
+  background-color: #eaf6ff;
+  transition: background 0.2s ease;
+}
+
+/* Links de ações */
+a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+/* Lista de relatórios */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #eaf6ff;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+ul li:hover {
+  background: #d3ecff;
+  transform: translateX(3px);
+}
+
+ul li a {
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 8px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #004aad;
+  }
+}
+
+.logout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ======== Cadastro ======== */
+
+.preferencias1{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 73px;
+}
+.preferencias2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.sejavolunt-doador{
+  margin: 45px;
+    border-radius: 10px;
+}
+
+/* ======== Index ======== */
+/* ===== ESTILO DO CARROSSEL ===== */
+.carrossel {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2b4a2f; /* Verde escuro suave */
+  font-size: 1.8rem;
+}
+
+.carrossel-imagens img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ===== SETAS DO SLICK ===== */
+.slick-prev, .slick-next {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: #1e6b34;
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #fff;
+  font-size: 24px;
+  opacity: 1;
+}
+
+/* ===== POSIÇÃO DAS SETAS ===== */
+.slick-prev {
+  left: -55px;
+}
+.slick-next {
+  right: -55px;
+}
+
+/* ===== BOLINHAS DE NAVEGAÇÃO ===== */
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #4CAF50; /* verde principal */
+  opacity: 0.6;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #1e6b34; /* tom mais escuro */
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 5px;
+  }
+  .slick-next {
+    right: 5px;
+  }
+
+}
+.img-carrossel{ width: 600px;}
+
+/* ======== E-mail cadastrado ======== */
+.email-cadastrado {
+  display: none;
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.email-cadastrado.ativo {
+  display: block;
+}
+
+/* =====  PROJETOS ===== */
+.submenu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+/* Estilo dos links */
+.submenu a {
+  color: var(--azul-escuro);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.submenu a:hover {
+  color: var(--verde-principal);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  /* Esconde o submenu por padrão no mobile */
+  .submenu {
+    display: none;
+  }
+
+  /* Quando o menu estiver ativo (classe 'active' no JS), mostra o submenu */
+  #menuNav.active + .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.6rem 0;
+  }
+
+  .submenu a {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+}
+[id] {
+  scroll-margin-top: 100px; /* ajuste conforme a altura do seu header */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== GALERIA DE PROJETOS ===== */
+.galeria-projetos {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 950px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.galeria-projetos img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  height: 250px;
+}
+
+/* Setas */
+.slick-prev, .slick-next {
+  background-color: rgba(66, 153, 85, 0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: #1e6b34;
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #fff;
+  font-size: 20px;
+  opacity: 1;
+}
+
+/* Dots */
+.slick-dots {
+  bottom: -30px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #4CAF50;
+  opacity: 0.6;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #1e6b34;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 5px;
+  }
+  .slick-next {
+    right: 5px;
+  }
+}
+
+.projeto{
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+/* ======== sobre a ong ======== */
+.quemsomos{
+  max-width: 100%;
+}
+.equipe{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ======== EFEITOS DO SPA (TRANSIÇÕES E FEEDBACK) ======== */
+
+/* Container principal que o Router atualiza */
+#conteudo {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  min-height: 60vh; /* evita 'pulos' ao trocar páginas curtas */
+}
+
+/* Quando o conteúdo for carregado */
+#conteudo.mostrar {
+  opacity: 1;
+}
+
+/* Tela de carregamento */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #444;
+  animation: pisca 1s infinite alternate;
+}
+
+@keyframes pisca {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Página de erro */
+.erro {
+  text-align: center;
+  padding: 3rem;
+  color: #c00;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.erro a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: #c00;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.erro a:hover {
+  background: #a00;
+}
+
+/* ======== 🌓 Alternar contraste ======== */
+/* 🌞 Modo Claro (padrão) */
+body {
+  background-color: #ffffff;
+  color: #222222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer, main, section {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* 🌙 Modo Escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e4e4e4;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #e4e4e4;
+}
+
+/* 🖤 Alto contraste */
+body.high-contrast {
+  background-color: #000000;
+  color: #ffff00;
+}
+
+body.high-contrast a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+/* 🔘 Estilo do botão */
+#toggle-contrast {
+  background-color: #eeeeee;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+body.dark-mode #toggle-contrast {
+  background-color: #333;
+  color: #fff;
+}
+
+body.high-contrast #toggle-contrast {
+  background-color: #ffff00;
+  color: #000;
+}
+
+
+
+
+
