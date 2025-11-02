@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Acesso ao painel da ONG Menos Tela e Mais Diversão.">
     <title>Login — Menos Tela e Mais Diversão</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 <body>
     <header>
@@ -29,13 +30,15 @@
   </header>
 
     <main>
-        <section aria-labelledby="login-title">
-            <div class="hero-title">
-                <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
-                <h1 id="login-title">Área Restrita</h1>
-            </div>
-            <p>Faça login para acessar o painel de administração ou área do voluntário.</p>
-            
+       <section  >
+            <div class="title">   
+                <div class="hero-title">
+                    <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
+                    <h1 id="hero-title">Área Restrita</h1>
+                    
+                    <p>Faça login para acessar o painel de administração ou área do voluntário.</p>
+                </div>  
+            </div>      
             <form action="#" method="post" novalidate>
                 <fieldset>
                     <legend>Login</legend>
@@ -49,10 +52,11 @@
                     <button type="submit">Entrar</button>
                     <button type="reset">Limpar</button>
                     <p><a href="recuperar-senha.html">Esqueceu sua senha?</a></p>
+                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
                 </fieldset>
             </form>
 
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
+            
             
         </section>
     </main>
@@ -66,10 +70,10 @@
                 <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
                 <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
             </div>
-            <p>&copy; <span id="year-login"></span> Menos Tela e Mais Diversão</p>
+            <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
             <p><strong>Desenvolvido por Leticia Geovú</strong></p>
         </div>
     </footer>
-    <script></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

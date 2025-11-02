@@ -203,6 +203,7 @@ h1{
   align-items: center;
   justify-content: center;
 }
+
 #loginMessage {
   margin-top: 10px;
   font-weight: bold;
@@ -213,6 +214,9 @@ h1{
   display: block;
   color: green;
 }
+
+
+
 
 section {
  background: #ffffffd9; /* o 'd9' define a transparência (~85%) */
@@ -582,6 +586,7 @@ html {
 }
 
 
+
 /* ======== EFEITOS DO SPA (TRANSIÇÕES E FEEDBACK) ======== */
 
 /* Container principal que o Router atualiza */
@@ -693,6 +698,9 @@ body.high-contrast #toggle-contrast {
   background-color: #ffff00;
   color: #000;
 }
+
+
+
 
 
 

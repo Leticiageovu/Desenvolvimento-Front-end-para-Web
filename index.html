@@ -12,10 +12,11 @@
     <meta name="revisit-after" content="7 days">
 
     <title>Menos Tela e Mais Diversão</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+  
 </head>
 <body>
- <header>
+    <header>
         <!-- Botão de menu só aparece no celular -->
         <div class="container-mob">
             <button class="menu-btn" id="menuBtn">
@@ -33,15 +34,20 @@
             <a href="cadastro.html">Cadastro</a> 
             <a href="login.html">Login</a>
         </nav>
+
         <button id="toggle-contrast" aria-label="Ativar modo escuro e alto contraste">
             🌓 Alternar contraste
         </button>
     </header>
 
+  
+  
+
+
   <main>
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-title">
-                <img src="assets/imagem/logo.png" alt="logo da ONG" >
+                <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
                 <h1 id="hero-title">Menos Tela e Mais Diversão</h1>
             </div>
             <div class="hero-somos">
@@ -54,15 +60,14 @@
             <h2>Galeria de Momentos</h2>
 
             <div class="carrossel-container">
-                <button class="anterior" aria-label="Imagem anterior">&#10094;</button>
-
+                
                 <div class="carrossel-imagens">
-                    <img src="assets/imagem/criançacomtinta.jpg" alt="Crianças brincando ao ar livre">
-                    <img src="assets/imagem/criancas-brincando1.png" alt="Oficina de pintura com voluntários">
-                    <img src="assets/imagem/crianças-correndo.jpg" alt="Evento recreativo da ONG">
-                    <img src="assets/imagem/crianças-sorrindo.jpg" alt="Voluntários organizando brinquedos">
+                    <img src="assets/imagem/criançacomtinta.jpg" alt="Crianças brincando ao ar livre" class="img-carrossel">
+                    <img src="assets/imagem/crianças-correndo.jpg" alt="Evento recreativo da ONG" class="img-carrossel">
+                    <img src="assets/imagem/criancas-brincando1.png" alt="Oficina de pintura com voluntários" class="img-carrossel">
+                    <img src="assets/imagem/crianças-sorrindo.jpg" alt="Voluntários organizando brinquedos" class="img-carrossel">
                 </div>
-                <button class="proximo" aria-label="Próxima imagem">&#10095;</button>
+                
             </div>
         </section>
         <section class="destaques" aria-labelledby="destaques-title">
@@ -84,10 +89,13 @@
 
         <section class="newsletter" aria-labelledby="newsletter-title">
             <h2 id="newsletter-title">Receba nossas novidades</h2>
-            <form action="#" method="post">
+            <form id="form-email" action="#" method="post">
                 <label for="email-news">Digite seu e-mail:</label>
                 <input type="email" id="email-news" name="email-news" placeholder="Seu e-mail" required>
                 <button type="submit">Inscrever-se</button>
+                <div class="email-cadastrado" id="email-cadastrado">
+                    Em breve você receberá novidades no seu e-mail!
+                </div>
             </form>
         </section>
 
@@ -110,10 +118,11 @@
                 <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
                 <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
             </div>
-            <p>&copy; <span id="year-cad"></span> Menos Tela e Mais Diversão</p>
+            <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
             <p><strong>Desenvolvido por Leticia Geovú</strong></p>
         </div>
     </footer>
-    <script></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>

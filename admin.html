@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Painel administrativo para gerenciar projetos, voluntários e doações da ONG Menos Tela e Mais Diversão.">
     <title>Painel Administrativo — Menos Tela e Mais Diversão</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -31,17 +31,18 @@
   </header>
 
     <main>
-        <section  aria-labelledby="admin-title">
+        <section class="title" aria-labelledby="admin-title">
             <div class="hero-title">
                 <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
                 <h1 id="admin-title">Painel Administrativo</h1>
             </div>    
             <p>Bem-vindo(a), Administrador! Aqui você pode gerenciar as informações da ONG, cadastrar novos projetos e acompanhar os voluntários e doações.</p>
+            
         </section>
 
        
-        <section aria-labelledby="proj-title">
-            <h2 id="proj-title">Gestão de Projetos</h2>
+        <section  aria-labelledby="proj-title">
+           <h2 id="proj-title">Gestão de Projetos</h2>
             <form action="#" method="post">
                 <fieldset>
                     <legend>Cadastrar novo projeto</legend>
@@ -72,8 +73,10 @@
                     </div>
                 </fieldset>
             </form>
-
-            <h3>Projetos Cadastrados</h3>
+        </section>
+        <section class="project" aria-labelledby="project-cadastrados">
+            <h2 id="project-cadastrados">Projetos Cadastrados</h2>
+            
             <table >
                 <thead>
                     <tr>
@@ -86,8 +89,8 @@
                 <tbody>
                     <tr>
                         <td>Oficinas Criativas</td>
-                        <td>Arte e Cultura</td>
-                        <td>Ativo</td>
+                        <td> Arte e Cultura</td>
+                        <td> Ativo</td>
                         <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
                     </tr>
                     <tr>
@@ -100,7 +103,7 @@
             </table>
         </section>
 
-        <section aria-labelledby="voluntarios-title">
+        <section  class="volunt-title" aria-labelledby="voluntarios-title">
             <h2 id="voluntarios-title">Gestão de Voluntários</h2>
             <table >
                 <thead>
@@ -129,7 +132,7 @@
         </section>
 
         
-        <section aria-labelledby="doacoes-title">
+        <section class="doac-title" aria-labelledby="doacoes-title">
             <h2 id="doacoes-title">Gestão de Doações</h2>
             <table >
                 <thead>
@@ -160,7 +163,7 @@
             </table>
         </section>
 
-        <section aria-labelledby="relatorios-title">
+        <section class="Relat-title" aria-labelledby="relatorios-title">
             <h2 id="relatorios-title">Relatórios e Indicadores</h2>
             <ul>
                 <li><a href="#">📊 Relatório de Participação de Voluntários</a></li>
@@ -170,7 +173,7 @@
         </section>
 
      
-        <section aria-labelledby="logout-title">
+        <section class="logout" aria-labelledby="logout-title">
             <h2 id="logout-title">Encerrar Sessão</h2>
             <p><a href="login.html">Sair do Painel</a></p>
         </section>
@@ -185,10 +188,10 @@
                 <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
                 <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
             </div>
-            <p>&copy; <span id="year-admin"></span> Menos Tela e Mais Diversão</p>
+            <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
             <p><strong>Desenvolvido por Leticia Geovú</strong></p>
         </div>
     </footer>
-    <script></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

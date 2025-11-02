@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Relatórios e informações de transparência da ONG Menos Tela e Mais Diversão.">
   <title>Transparência — Menos Tela e Mais Diversão</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <!-- Botão de menu só aparece no celular -->
     <div class="container-mob">
       <button class="menu-btn" id="menuBtn">
-        <img src="assets/imagem/menu.png" alt="menu">
+          <img src="assets/imagem/menu.png" alt="menu">
       </button>
     </div>
 
@@ -31,7 +31,8 @@
   </header>
 
   <main>
-    <section class="transparencia" aria-labelledby="hero-transparencia">
+    
+    <section class="title" aria-labelledby="hero-transparencia">
       <div class="hero-title">
         <img src="assets/imagem/logo.png" alt="logo da ONG" class="img-logo" >
         <h1 id="hero-transparencia">Transparência</h1>
@@ -86,16 +87,19 @@
   </main>
 
   <hr>
-  <footer>
+ <footer>
     <div class="container-footer">
-      <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
-      <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
-      <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
-      <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+      <div class="imagem-container-footer">
+        <a href="#"><img src="assets/imagem/twitter.png" alt="twitter"></a>
+        <a href="#"><img src="assets/imagem/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="assets/imagem/youtube.png" alt="youtube"></a>
+        <a href="#"><img src="assets/imagem/linkedin.png" alt="linkedin"></a>
+      </div>
       <p>&copy; <span id="year"></span> Menos Tela e Mais Diversão</p>
       <p><strong>Desenvolvido por Leticia Geovú</strong></p>
     </div>
   </footer>
-  <script></script>
+  
+  <script src="js/transparencia.js"></script>
 </body>
 </html>
