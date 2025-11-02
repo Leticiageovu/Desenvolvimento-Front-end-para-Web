@@ -1,10 +1,15 @@
 # Documentação Técnica - Atividade 1:HTML
 
 ## informações do Projeto
+
 **Atividade:** Desenvolvimento Front-End para Web
+
 **Turma:** 005
+
 **Aluna:** Letícia Gabrielly Dos Santos Geovú  
+
 **RGM:** 46294554
+
 **Atividade 1**: Estrutura HTML
 
 ## 🧩 Descrição do Projeto
