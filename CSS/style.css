@@ -216,8 +216,6 @@ h1{
 }
 
 
-
-
 section {
  background: #ffffffd9; /* o 'd9' define a transparência (~85%) */
   border-radius: 12px;
@@ -642,6 +640,7 @@ html {
   background: #a00;
 }
 
+
 /* ======== 🌓 Alternar contraste ======== */
 /* 🌞 Modo Claro (padrão) */
 body {
@@ -698,11 +697,6 @@ body.high-contrast #toggle-contrast {
   background-color: #ffff00;
   color: #000;
 }
-
-
-
-
-
 
 
 
