@@ -1,6 +1,6 @@
-// Espera o DOM estar pronto
-document.addEventListener("DOMContentLoaded", function () {
-  // Gráfico de pizza — Doações
+function initTransparencia() {
+  console.log("✅ initTransparencia iniciado!");
+
   const ctx1 = document.getElementById('graficoDoacoes');
   if (ctx1) {
     new Chart(ctx1, {
@@ -15,22 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Gráfico de barras — Impacto
   const ctx2 = document.getElementById('graficoImpacto');
   if (ctx2) {
     new Chart(ctx2, {
       type: 'bar',
       data: {
-        labels: [ '2024', '2025'],
+        labels: ['2024', '2025'],
         datasets: [
           {
             label: 'Crianças atendidas',
-            data: [ 600, 850],
+            data: [600, 850],
             backgroundColor: '#36A2EB'
           },
           {
             label: 'Horas de voluntariado',
-            data: [ 1450, 1800],
+            data: [1450, 1800],
             backgroundColor: '#FF6384'
           }
         ]
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Gráfico de linha — Projetos
   const ctx3 = document.getElementById('graficoProjetos');
   if (ctx3) {
     new Chart(ctx3, {
@@ -54,4 +52,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-});
+}

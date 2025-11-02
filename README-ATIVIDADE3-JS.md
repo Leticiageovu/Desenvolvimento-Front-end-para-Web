@@ -26,45 +26,67 @@ O site foi implementado como uma **Single Page Application (SPA)** utilizando **
 
 ### 🧭 1. `Sistema SPA (Single Page Application)`
 
-Implementado no arquivo js/router.js.
+Implementado no arquivo *js/router.js.*
 
-As rotas são controladas via hash (#/).
+As rotas são controladas por hash (*#/sobre, #/projetos, #/contato, etc.*).
 
-O conteúdo das páginas é carregado dinamicamente dentro da <main id="conteudo"> do index.html, sem recarregar a página.
+O conteúdo das páginas é carregado dinamicamente dentro da tag <main id="conteudo"> *no index.html.*
 
-Inclui animação de transição (fade-in) e uma mensagem de “Carregando conteúdo…” durante a troca de rotas.
+**Inclui:**
 
-Cada página pode ter um script JS próprio, carregado automaticamente se existir (js/nomeDaPagina.js).
+- Animação de transição (fade-in);
+
+- Mensagem de carregamento (“Carregando conteúdo...”);
+
+- Atualização automática do título da aba;
+
+- Rolagem suave até o topo após cada troca de rota.
+
+Além disso, o sistema verifica e injeta automaticamente scripts específicos para cada página, evitando duplicações.
 
 ---
 
 ### 📄 2. `Sistema de Templates com JavaScript`
 
-As páginas dentro da pasta /pages funcionam como templates HTML.
+- Todas as páginas HTML estão localizadas dentro da pasta /pages.
 
-O conteúdo de cada página é carregado no elemento principal (<main id="conteudo">).
+- Cada arquivo (*home.html, contato.html, cadastro.html etc.*) funciona como um template modular.
 
-Essa estrutura modular facilita a manutenção e expansão do site.
+- O *router.js* busca o arquivo correspondente à rota e o injeta dentro do <main id="conteudo">.
 
+Essa estrutura modular facilita:
+
+- A manutenção do código;
+
+- A adição de novas páginas;
+
+- A reutilização de componentes e scripts.
 ---
 
 ### 🧠 3. `Manipulação do DOM`
 
-O JavaScript interage diretamente com o DOM:
+O JavaScript interage com o DOM de forma dinâmica, mesmo após trocas de página dentro do SPA.
 
-- Atualiza o conteúdo principal conforme a rota.
+As principais operações são:
 
-- Exibe e remove classes CSS para transições visuais.
+- Atualizar o conteúdo principal conforme a rota (*fetch() + innerHTML*);
 
-- Cria e adiciona dinamicamente scripts JS específicos de cada página.
+- Exibir e remover classes CSS para efeitos de transição (*mostrar, ativo*);
 
-- Gera mensagens de erro e sucesso nos formulários.
+- Criar e injetar dinamicamente scripts JS específicos de cada página;
+
+- Controlar elementos interativos (como formulários, mensagens e sliders).
+
+**🆕 Atualização importante:**
+
+Com a adoção do SPA, o evento **DOMContentLoaded** não é mais disparado ao trocar de rota.
+Para resolver isso, cada página agora possui uma função de inicialização própria (ex: **initHome())**, chamada automaticamente após o *carregamento* pelo **router.js**.
 
 ---
 
 ### ✅ 4. `Validação de Formulários`
 
--Implementada via módulo formValidator.js.
+Implementada via módulo formValidator.js, garantindo consistência e feedback visual.
 
 Verifica consistência dos campos:
 
@@ -100,6 +122,8 @@ Script: js/cadastro.js
 
 - Demonstra manipulação do DOM (reset de formulário, exibição/remoção de mensagens).
 
+- Demonstra o uso de classes dinâmicas e temporizadores (setTimeout) para mensagens de sucesso.
+
 
 ### 🔐 7. `Página de Login`
 
@@ -118,54 +142,124 @@ Simula autenticação com validação simples:
 
 📍 **router.js**
 
-**Gerencia toda a navegação SPA.**
+**Gerencia toda a navegação do SPA, controlando rotas, carregamento de páginas e scripts específicos.**
 
 ```
-// Mapeamento de rotas
-const rotas = {
+/const rotas = {
   "/": "pages/home.html",
   "/sobre": "pages/sobre.html",
-  ...
+  "/projetos": "pages/projetos.html",
+  "/transparencia": "pages/transparencia.html",
+  "/contato": "pages/contato.html",
+  "/cadastro": "pages/cadastro.html",
+  "/login": "pages/login.html"
 };
-// Função de navegação
+
 async function navegar() {
   const caminho = window.location.hash.replace("#", "") || "/";
   const arquivo = rotas[caminho] || rotas["/"];
 
-  const resposta = await fetch(arquivo);
-  const html = await resposta.text();
-  conteudo.innerHTML = html;
-
-  // Transição suave
+  conteudo.innerHTML = `<div class="loading"><p>Carregando conteúdo...</p></div>`;
   conteudo.classList.remove("mostrar");
-  setTimeout(() => conteudo.classList.add("mostrar"), 50);
 
-  // Carrega JS da rota, se existir
-  carregarScriptDaPagina(caminho);
+  try {
+    const resposta = await fetch(arquivo);
+    const html = await resposta.text();
+    conteudo.innerHTML = html;
+    setTimeout(() => conteudo.classList.add("mostrar"), 50);
+
+    const tituloPagina = document.querySelector("main h1")?.textContent || "Menos Tela e Mais Diversão";
+    document.title = tituloPagina;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    carregarScriptDaPagina(caminho);
+  } catch (erro) {
+    conteudo.innerHTML = `<section class="erro"><h2>Ops! Página não encontrada 😢</h2><p>${erro.message}</p></section>`;
+  }
 }
+
 ```
 ---
 
 ### ⚙️ carregarScriptDaPagina()
 
-Responsável por verificar e injetar o script JS correspondente à página carregada:
+Verifica se existe um arquivo JavaScript correspondente à rota atual e o executa (sem duplicar scripts já carregados).
+
 ```
 function carregarScriptDaPagina(caminho) {
   const nome = caminho.replace("/", "") || "index";
   const src = `js/${nome}.js`;
 
-  fetch(src, { method: "HEAD" }).then(res => {
-    if (res.ok) {
-      const script = document.createElement("script");
-      script.src = src;
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  });
+  if (document.querySelector(`script[src="${src}"]`)) {
+    if (nome === "index" && typeof initHome === "function") initHome();
+    return;
+  }
+
+  fetch(src, { method: "HEAD" })
+    .then(res => {
+      if (res.ok) {
+        const script = document.createElement("script");
+        script.src = src;
+        script.defer = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+          if (nome === "index" && typeof initHome === "function") initHome();
+        };
+      }
+    });
 }
+
 ```
 
 ---
+
+### 🏠 `index.js (Página Inicial)`
+
+Gerencia o carrossel de imagens e o formulário de inscrição na newsletter.
+Agora utiliza uma função initHome() para garantir que o script rode tanto no carregamento inicial quanto ao voltar para #/.
+
+```
+function initHome() {
+  if ($(".carrossel-imagens").length) {
+    $(".carrossel-imagens").slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      adaptiveHeight: true
+    });
+  }
+
+  const form = document.getElementById("form-email");
+  const cadastrado = document.getElementById("email-cadastrado");
+
+  if (form && cadastrado) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = form.querySelector("#email-news").value.trim();
+
+      if (!email || !email.includes("@")) {
+        alert("Por favor, insira um e-mail válido.");
+        return;
+      }
+
+      cadastrado.classList.add("ativo");
+      form.reset();
+      setTimeout(() => cadastrado.classList.remove("ativo"), 4000);
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initHome);
+
+
+```
+
+
+----
 
 ### 📩 `formValidator.js`
 
@@ -235,13 +329,15 @@ document.addEventListener("DOMContentLoaded", () => {
 ---
 ### 🧰 Tecnologias Utilizadas
 
-**HTML5** — estrutura semântica das páginas.
+**HTML5** — Estrutura semântica das páginas.
 
-**CSS3** — responsividade e estilo visual.
+**CSS3** — Responsividade e estilo visual.
 
-**JavaScript (ES6+)** — manipulação do DOM, SPA e validação de formulários.
+**JavaScript (ES6+)** — Manipulação do DOM, SPA e validação de formulários.
 
-**Arquitetura modular**— cada funcionalidade separada em seu próprio arquivo JS.
+**Slick Slider** — Implementação do carrossel de imagens.
+
+**Arquitetura modular**— Cada funcionalidade separada em seu próprio arquivo JS.
 
 ✨ Autoria
 

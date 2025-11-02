@@ -1,12 +1,18 @@
-// js/login.js
-document.addEventListener("DOMContentLoaded", () => {
+function initLogin() {
+  console.log("✅ initLogin iniciado!");
+
   const form = document.querySelector("#loginForm");
   const emailInput = document.querySelector("#email");
   const senhaInput = document.querySelector("#senha");
   const msg = document.querySelector("#loginMessage");
 
+  if (!form) {
+    console.warn("⚠️ Formulário de login não encontrado.");
+    return;
+  }
+
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault(); // impede o POST 405
 
     msg.textContent = "";
     msg.classList.remove("ativo");
@@ -33,4 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => msg.classList.remove("ativo"), 3000);
   });
-});
+}

@@ -1,4 +1,4 @@
- // ======== Página Cadastro  ========
+
 document.addEventListener("DOMContentLoaded", () => {
  
   // ======== MENU MOBILE ========

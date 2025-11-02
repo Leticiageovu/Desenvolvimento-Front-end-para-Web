@@ -37,7 +37,8 @@ async function navegar() {
     setTimeout(() => conteudo.classList.add("mostrar"), 50);
 
     // 🔹 Atualiza título da aba conforme o conteúdo
-    const tituloPagina = document.querySelector("main h1")?.textContent || "Menos Tela e Mais Diversão";
+    const tituloPagina =
+      document.querySelector("main h1")?.textContent || "Menos Tela e Mais Diversão";
     document.title = tituloPagina;
 
     // 🔹 Volta o scroll para o topo da página
@@ -63,21 +64,45 @@ function carregarScriptDaPagina(caminho) {
   const nome = caminho.replace("/", "") || "index";
   const src = `js/${nome}.js`;
 
-  // Evita carregar o mesmo script várias vezes
-  if (document.querySelector(`script[src="${src}"]`)) return;
+  // Remove qualquer script anterior de página
+  const scriptAntigo = document.querySelector(`script[data-pagina]`);
+  if (scriptAntigo) scriptAntigo.remove();
 
+  // Faz uma checagem se o script da página existe
   fetch(src, { method: "HEAD" })
-    .then(res => {
+    .then((res) => {
       if (res.ok) {
         const script = document.createElement("script");
         script.src = src;
         script.defer = true;
+        script.dataset.pagina = nome;
+        script.onload = () => {
+          // 🔹 Após carregar o script, tenta executar a função initXxx()
+          const nomeFuncao = `init${nome.charAt(0).toUpperCase() + nome.slice(1)}`;
+          const funcao = window[nomeFuncao];
+
+          if (typeof funcao === "function") {
+            console.log(`🚀 Executando ${nomeFuncao}()`);
+
+            // Aguarda o DOM estar pronto dentro do SPA
+            setTimeout(() => {
+              try {
+                funcao();
+              } catch (erro) {
+                console.error(`❌ Erro ao executar ${nomeFuncao}:`, erro);
+              }
+            }, 150);
+
+          } else {
+            console.warn(`⚠️ Nenhuma função ${nomeFuncao} encontrada`);
+          }
+        };
         document.body.appendChild(script);
+      } else {
+        console.warn(`⚠️ Script não encontrado: ${src}`);
       }
     })
-    .catch(() => {
-      // ignora caso o script não exista
-    });
+    .catch((erro) => console.error("Erro ao carregar script:", erro));
 }
 
 // 🔹 Eventos do navegador
