@@ -644,27 +644,34 @@ html {
 /* ======== 🌓 Alternar contraste ======== */
 /* 🌞 Modo Claro (padrão) */
 body {
-  background-color: #ffffff;
+  background-color: #ffffffd9;
   color: #222222;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header, footer, main, section {
-  background-color: #ffffff;
+ /* background-color: #ffffffd9;*/
   color: #222222;
 }
 
 /* 🌙 Modo Escuro */
 body.dark-mode {
   background-color: #121212;
-  color: #e4e4e4;
+  color: #ffffffd9;
+}
+
+@media (min-width: 760px) {
+  body.dark-mode header a {
+    color: #ffffffd9 !important;
+  }
 }
 
 body.dark-mode header,
 body.dark-mode footer,
 body.dark-mode section {
   background-color: #1e1e1e;
-  color: #e4e4e4;
+  color: #ffffffd9;
+ 
 }
 
 /* 🖤 Alto contraste */
@@ -674,13 +681,13 @@ body.high-contrast {
 }
 
 body.high-contrast a {
-  color: #00ffff;
+  color: #0400ff;
   text-decoration: underline;
 }
 
 /* 🔘 Estilo do botão */
 #toggle-contrast {
-  background-color: #eeeeee;
+  background-color: #ffffffd9;
   border: 2px solid #444;
   border-radius: 8px;
   padding: 8px 12px;
