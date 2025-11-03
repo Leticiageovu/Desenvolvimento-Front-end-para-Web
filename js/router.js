@@ -8,6 +8,8 @@ const rotas = {
   "/transparencia": "pages/transparencia.html",
   "/contato": "pages/contato.html",
   "/cadastro": "pages/cadastro.html",
+  "/recuperar-senha": "pages/recuperar-senha.html",
+  "/recuperar-confirmacao": "pages/recuperar-confirmacao.html",
   "/login": "pages/login.html"
 };
 
