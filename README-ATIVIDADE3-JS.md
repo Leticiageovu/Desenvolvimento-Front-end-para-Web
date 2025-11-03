@@ -26,11 +26,11 @@ O site foi implementado como uma **Single Page Application (SPA)** utilizando **
 
 ### 🧭 1. `Sistema SPA (Single Page Application)`
 
-Implementado no arquivo *js/router.js.*
+Implementado no arquivo js/router.js.
 
-As rotas são controladas por hash (*#/sobre, #/projetos, #/contato, etc.*).
+As rotas são controladas por hash (#/sobre, #/projetos, #/contato, etc.).
 
-O conteúdo das páginas é carregado dinamicamente dentro da tag <main id="conteudo"> *no index.html.*
+O conteúdo das páginas é carregado dinamicamente dentro da tag **<main id="conteudo">** **no index.html.**
 
 **Inclui:**
 
@@ -50,9 +50,9 @@ Além disso, o sistema verifica e injeta automaticamente scripts específicos pa
 
 - Todas as páginas HTML estão localizadas dentro da pasta /pages.
 
-- Cada arquivo (*home.html, contato.html, cadastro.html etc.*) funciona como um template modular.
+- Cada arquivo (**home.html, contato.html, cadastro.html etc.**) funciona como um template modular.
 
-- O *router.js* busca o arquivo correspondente à rota e o injeta dentro do <main id="conteudo">.
+- O **router.js** busca o arquivo correspondente à rota e o injeta dentro do <main id="conteudo">.
 
 Essa estrutura modular facilita:
 
@@ -69,9 +69,9 @@ O JavaScript interage com o DOM de forma dinâmica, mesmo após trocas de págin
 
 As principais operações são:
 
-- Atualizar o conteúdo principal conforme a rota (*fetch() + innerHTML*);
+- Atualizar o conteúdo principal conforme a rota (**fetch() + innerHTML**);
 
-- Exibir e remover classes CSS para efeitos de transição (*mostrar, ativo*);
+- Exibir e remover classes CSS para efeitos de transição (**mostrar, ativo**);
 
 - Criar e injetar dinamicamente scripts JS específicos de cada página;
 
@@ -80,7 +80,7 @@ As principais operações são:
 **🆕 Atualização importante:**
 
 Com a adoção do SPA, o evento **DOMContentLoaded** não é mais disparado ao trocar de rota.
-Para resolver isso, cada página agora possui uma função de inicialização própria (ex: **initHome())**, chamada automaticamente após o *carregamento* pelo **router.js**.
+Para resolver isso, cada página agora possui uma função de inicialização própria (ex: **initHome())**, chamada automaticamente após o **carregamento** pelo **router.js**.
 
 ---
 
@@ -96,7 +96,11 @@ Verifica consistência dos campos:
 
 - Mensagem com pelo menos 10 caracteres.
 
-- Exibe mensagens de erro ao lado dos campos incorretos (<small class="erro-msg">).
+- Exibe mensagens de erro ao lado dos campos incorretos 
+
+```
+(<small class="erro-msg">).
+```
 
 - Mostra um aviso de sucesso após envio válido.
 
@@ -216,7 +220,7 @@ function carregarScriptDaPagina(caminho) {
 ### 🏠 `index.js (Página Inicial)`
 
 Gerencia o carrossel de imagens e o formulário de inscrição na newsletter.
-Agora utiliza uma função initHome() para garantir que o script rode tanto no carregamento inicial quanto ao voltar para #/.
+Agora utiliza uma função **initHome()** para garantir que o script rode tanto no carregamento inicial quanto ao voltar para #/.
 
 ```
 function initHome() {
