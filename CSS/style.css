@@ -575,6 +575,10 @@ html {
   max-width: 900px;
 }
 /* ======== sobre a ong ======== */
+.sobre-ong {
+  display: flex;
+  flex-direction: column;
+}
 .quemsomos{
   max-width: 100%;
 }

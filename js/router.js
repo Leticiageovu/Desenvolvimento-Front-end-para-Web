@@ -1,5 +1,3 @@
-// js/router.js
-
 const conteudo = document.getElementById("conteudo");
 
 // 🔹 Mapeamento das rotas e páginas
