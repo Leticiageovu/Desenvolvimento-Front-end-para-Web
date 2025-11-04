@@ -1,110 +1,210 @@
+# ONG Menos Tela e Mais Diversão
 
-# Documentação Técnica - Atividade 4: Versionamento, Acessibilidade e Deploy
-## Informações do Projeto
+## 🧩 Sobre o Projeto
 
-**Atividade:** Desenvolvimento Front-End para Web
+O site Menos Tela e Mais Diversão é uma aplicação web desenvolvida como projeto integrador do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de conscientizar sobre o uso equilibrado das tecnologias por crianças e adolescentes.
+A iniciativa representa uma ONG fictícia, mas inspirada em causas reais, que busca incentivar atividades recreativas, culturais e educativas fora das telas.
 
-**Turma:** 005
+----
+## 🎯 Objetivo Geral
 
-**Aluna:** Letícia Gabrielly dos Santos Geovú
-
-**RGM:** 46294554
-
-**Atividade 4:** Versionamento, Acessibilidade (WCAG 2.1 AA) e Deploy
-
-## 🎯 Descrição do Projeto
-
-O projeto **Menos Tela e Mais Diversão** é uma aplicação web voltada à conscientização sobre o uso equilibrado de tecnologias por crianças.
-Nesta etapa final, o foco foi consolidar o desenvolvimento com boas práticas profissionais: **versionamento com GitFlow, acessibilidade conforme WCAG 2.1 nível AA, e otimização para produção e deploy em ambiente real.**
+Criar um ambiente digital acessível, moderno e funcional que divulgue as ações da ONG, estimule o voluntariado e facilite o contato com o público — mostrando que é possível se divertir longe dos dispositivos eletrônicos.
 
 ---
 
-### ⚙️ 1. `Controle de Versão com Git/GitHub`
+### 💡 Ideia Central
 
-**🔹 Estrutura GitFlow**
+A proposta do site é aproximar a comunidade das ações da ONG por meio de:
 
-O fluxo de versionamento seguiu a metodologia GitFlow, com as seguintes branches principais:
+- Informações sobre os projetos sociais;
 
-- main → versão estável do projeto (produção)
+- Divulgação da missão, visão e valores da instituição;
 
-- develop → ambiente de desenvolvimento e integração
+- Cadastro de voluntários e doadores;
 
-- CSS, JS, modo-escuro, deploy → branches de features específicas
+- Contato direto com a equipe e área administrativa;
 
+- Uma navegação fluida e responsiva, representando boas práticas de desenvolvimento web.
+  
+---
+### 🧭 `Estrutura Geral do Site`
+Menos Tela e Mais Diversão/
 
-**🔹 Histórico de commits**
+│
 
-Os commits foram organizados de forma semântica e descritiva, utilizando convenções como:
+├── index.html
 
-- feat: para novas funcionalidades
+├── pages/
 
-- fix: para correções
+│   ├── home.html
 
-- refactor: para ajustes de código
+│   ├── sobre.html
 
-- style: para melhorias visuais
+│   ├── projetos.html
+
+│   ├── transparencia.html
+
+│   ├── recuperar-confirmacao.html
+
+│   ├── recuperar-senha.html
+
+│   ├── cadastro.html
+
+│   ├── contato.html
+
+│   └── login.html
+
+│
+
+├── js/
+
+│   ├── router.js
+
+│   ├── router.min.js
+
+│   ├── formValidator.js
+
+│   ├── formValidator.min.js
+
+│   ├── cadastro.js
+
+│   ├── cadastro.min.js
+
+│   ├── contato.js
+
+│   ├── contato.min.js
+
+│   ├── login.js
+
+│   ├── login.min.js
+
+│   ├── modo-escuro.js
+
+│   └── modo-escuro.min.js
+
+│
+
+├── CSS/
+
+│   ├── style.css
+
+│   └── style.min.css
+
+│
+
+├── assets/
+
+│   └── imagens/
+
+│
+
+└── README.md
 
 ---
 
-**🔹 Releases**
+### 🧾 `Estrutura do Desenvolvimento`
 
-Após consolidar as features e integrar o conteúdo final, foi criada a release final:
-
-```
-git tag -a v1.1.0 -m "Release final otimizada - minificação, acessibilidade e produção
-
-git push origin v1.1.0
-
-```
-
-**Versão Final: v1.1.0**
+O desenvolvimento foi dividido em 4 etapas principais (Atividades 1 a 4), seguindo um fluxo de aprendizado progressivo até a conclusão do site funcional hospedado no GitHub Pages.
 
 ---
 
-### 🧩 2. `Acessibilidade (WCAG 2.1 - Nível AA)`
+### 🧱 `Atividade 1 — Estrutura HTML`
 
-O site foi aprimorado para garantir **acessibilidade universal**, atendendo aos principais critérios da **WCAG 2.1 Nível AA**.
+**Objetivo**: criar toda a estrutura semântica do site utilizando **HTML5**, com foco em acessibilidade, organização e boas práticas de SEO.
+
+**Principais entregas**:
+
+- Marcação semântica completa (header, main, section, article, footer);
+
+- Uso de atributos **ARIA** e **textos alternativos** em imagens;
+
+- Organização lógica do conteúdo;
+
+- Estrutura de páginas: Home, Sobre, Projetos, Transparência, Cadastro, Contato e Login;
+
+- Rodapé com redes sociais e créditos.
+
+**Resultado**: um site com **estrutura sólida**, preparado para receber estilização e interatividade.
 
 ---
 
-**🔹 Implementações:**
+### 🎨 `Atividade 2 — Estilização com CSS`
 
-- **Navegação via teclado**: todos os menus e botões são acessíveis com TAB e acionáveis com ENTER.
+**Objetivo**: aplicar a identidade visual da ONG, explorando cores, tipografia e layout responsivo.
 
-- **Estrutura semântica**: uso correto de **header, main, section, article, nav, footer e atributos aria-label e aria-labelledby**.
+**Destaques Técnicos**:
 
-- **Leitores de tela**: todas as imagens possuem alt descritivo e botões com **aria-label**.
+- Layout responsivo com Flexbox e Media Queries;
 
-- **Contraste adequado**: cores revisadas para manter **contraste mínimo de 4.5:1** conforme **WCAG**.
+- Menu adaptativo com botão mobile (hambúrguer);
 
-- **Modo escuro e alto contraste**: implementado no arquivo **js/modo-escuro.js**, com troca dinâmica de tema e acessibilidade preservada.
+- Paleta de cores: azul (confiança), verde (natureza) e branco translúcido (leveza);
+
+- Estilos aplicados a formulários, tabelas, carrosséis e seções;
+
+- Scroll suave e transições animadas para melhor UX;
+
+- Implementação de carrossel com Slick Slider.
+
+**Resultado**: uma interface moderna, acessível e coerente com a identidade da ONG.
 
 ---
 
-Exemplo de regra aplicada:
+### ⚙️ `Atividade 3 — Funcionalidades com JavaScript`
 
-```
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffffd9;
-}
-body.dark-mode header a {
-  color: #ffffffd9 !important;
-}
-```
+**Objetivo**: adicionar interatividade, lógica de navegação e validações dinâmicas.
+
+**Principais funcionalidades**:
+
+- 🧭 **Sistema SPA (Single Page Application)** — navegação dinâmica via router.js sem recarregar a página;
+
+- 📄 **Templates modulares** — carregamento de páginas através da pasta /pages;
+
+- 🧠 **Manipulação do DOM** com fetch() e classes CSS para transições suaves;
+
+- ✅ **Validação de formulários** (formValidator.js);
+
+- 📬 **Formulário de contato e cadastro** com mensagens de sucesso temporárias;
+
+- 🔐 Simulação de login administrativo;
+
+- 🧩 Estrutura modular JavaScript (ES6+), facilitando manutenção e escalabilidade.
+
+**Resultado**: o site passou a ter comportamento dinâmico, funcional e com transições suaves entre páginas.
+
 ---
 
-### 🚀 3. `Otimização para Produção`
+### 🚀 `Atividade 4 — Versionamento, Acessibilidade e Deploy`
 
-**🔹 Minificação**
+**Objetivo**: consolidar o projeto com boas práticas de GitFlow, acessibilidade WCAG 2.1 AA e publicação no GitHub Pages.
 
-Todos os arquivos foram otimizados para reduzir o tamanho e melhorar o desempenho:
+**Principais melhorias**:
 
-- CSS/style.css → CSS/style.min.css
+- Controle de versão com **branches**: main, develop, CSS, JS, modo-escuro, deploy;
 
-- JS/script.js → JS/script.min.js
+- Commits semânticos (feat, fix, style, refactor);
 
-- index.html e páginas em /pages minificadas mantendo nomes originais
+- **Acessibilidade aprimorada:**
+
+   - Navegação por teclado;
+
+   - Textos alternativos e aria-labels;
+
+   - Contraste mínimo 4.5:1;
+
+   - Estrutura semântica revisada;
+
+- **Modo escuro** acessível (modo-escuro.js);
+
+- **Minificação** de arquivos HTML, CSS e JS;
+
+- **Compressão de imagens** (TinyPNG);
+
+- **Deploy final via GitHub Pages.**
+
+### 🔗 Versão Online:
+
+https://leticiageovu.github.io/Desenvolvimento-Front-end-para-Web/
 
 ---
 
@@ -118,66 +218,56 @@ Todas as imagens foram comprimidas utilizando o TinyPNG.
 
 ---
 
-**🔹 Estrutura Final**
-
-```
-/CSS
- ├─ style.css
- ├─ style.min.css
-/JS
- ├─ script.js
- ├─ script.min.js
- ├─ modo-escuro.js
-/pages
- ├─ home.html
- ├─ sobre.html
- ├─ projetos.html
-index.html
-/assets/imagem/
-```
-
-### 🌐 4. `Deploy`
-
-O deploy foi realizado via GitHub Pages, com a branch **main** como fonte de produção.
-
-**Configuração:**
-
-- Repositório: github.com/Leticiageovu/Desenvolvimento-Front-end-para-Web
-
-- Branch: main
-
-- Pasta raiz (/)
-
-**Acesso online:**
-
-🔗 https://leticiageovu.github.io/Desenvolvimento-Front-end-para-Web/
 
 
-### 🧰 Tecnologias e Ferramentas Utilizadas
+## 🧰 Tecnologias e Ferramentas Utilizadas
 
-**HTML5** — Estrutura semântica
+| Categoria          | Ferramentas / Tecnologias                                   |
+| ------------------ | ----------------------------------------------------------- |
+| Linguagens         | **HTML5**, **CSS3**, **JavaScript (ES6+)**                  |
+| Controle de versão | **Git / GitHub** (Fluxo GitFlow)                            |
+| Bibliotecas        | **Slick Slider**, **Chart.js**                              |
+| Acessibilidade     | **WCAG 2.1 AA**, uso de `aria-label` e `alt`                |
+| Otimização         | **TinyPNG** (compressão de imagens), **minificação CSS/JS** |
+| Deploy             | **GitHub Pages**                                            |
+| IDE                | **Visual Studio Code**                                      |
 
-**CSS3** — Responsividade e estilo
+---
+## 🌐 Público-Alvo
 
-**JavaScript (ES6+)** — Funcionalidades dinâmicas e SPA
+- Pais, educadores e responsáveis preocupados com o uso de telas por crianças;
+- Voluntários e doadores interessados em participar das ações da ONG;
+- Público geral que busca conhecer o impacto das iniciativas sociais.
 
-**Git/GitHub** — Versionamento e releases
+---
 
-**TinyPNG** — Compressão de imagens
+## 🧑‍💻 Autoria e Créditos
 
-**Slick Slider / Chart.js**— Interatividade visual
+**Desenvolvido por:** *Letícia Gabrielly dos Santos Geovú*
 
-**GitHub Pages** — Hospedagem gratuita e deploy automático
+**RGM:** 46294554
 
+**Turma:** 005 — *Desenvolvimento Front-End para Web*
 
-✨ Autoria
+💻 **Instituição:** Cruzeiro do Sul
 
-Desenvolvido por: Letícia Gabrielly dos Santos Geovú
+---
 
-Atividade 4 — Desenvolvimento Front-End para Web
+## 🏁 Status do Projeto
 
-Tema: Menos Tela e Mais Diversão
+✅ **Versão Final Concluída (v1.1.0)**
 
-Versão Final: v1.1.0
+📅 **Data:** Novembro de 2025
 
-Data: Novembro/2025
+📦 **Branch principal:** `main` — contém o projeto completo, integrado e otimizado.
+
+---
+
+## 📎 Links Importantes
+
+* 🌍 **Site (deploy):** [Acessar o site](https://leticiageovu.github.io/Desenvolvimento-Front-end-para-Web/)
+* 📂 **Repositório GitHub:** [Ver repositório](https://github.com/Leticiageovu/Desenvolvimento-Front-end-para-Web)
+
+---
+
+✨ *"Menos tela, mais conexão real — porque brincar, aprender e viver fora da tela é mais divertido."*
